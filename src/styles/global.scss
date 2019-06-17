@@ -1,0 +1,28 @@
+body {
+  width: 100%;
+	min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.container {
+  width: 1260px;
+  margin: 0 auto;
+  padding: 0 80px;
+  background-color: #eeeeee;
+}
+
+.done {
+  color: green;
+}
+
+.undone {
+  color: red;
+}
