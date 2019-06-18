@@ -12,11 +12,34 @@
 <body>
   
   <div id="app" class="container">
+    <h2>Add To do</h2>
+    <div class="workspace">
+      <textarea v-model="newNote" class="textarea"></textarea>
+      <button @click="saveNote(newNote)" class="save" >Save</button>
+    </div>
+    <h2>To do</h2>
     <ul class="notes">
-      <li v-for="(note,i) in notes" @click="changeState(i)" v-bind:class="isDone(i)">
-        <span>{{ note.text }}</span>
-        <span @click="removeNote(i)">X</span>
-      </li>
+      <h3 v-if="rest === 0">
+        Nothing to do
+      </h3>
+      <transition-group name="fade" tag="li">
+        <li v-for="(note,i) in notes" class="note" v-if="!note.state" :key="i">
+          <div class=""  @click="changeState(i)" v-bind:class="[isDone(i), 'message']">{{ note.text }}</div>
+          <button class="remove" @click="removeNote(i)">
+            <span>X</span>
+          </button>
+        </li>
+      </transition-group>
+    </ul>
+
+    <h2>Done</h2>
+    <ul class="notes notes--done">
+      <transition-group name="fade" tag="li">
+        <li v-for="(note,i) in notes" class="note" v-if="note.state" :key="i">
+          <div class=""  @click="changeState(i)" v-bind:class="[isDone(i), 'message']">{{ note.text }}</div>
+          <button class="remove" @click="removeNote(i)">X</button>
+        </li>
+      </transition-group>
     </ul>
   </div>
 

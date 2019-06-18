@@ -1,0 +1,35 @@
+.notes {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.message {
+  width: 90%;
+  padding: 16px;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.remove {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  outline-color: #e3e3e3;
+
+  span {
+    margin: auto;
+  }
+}
+

@@ -1,0 +1,25 @@
+.textarea {
+  display: block;
+  width: 60%;
+  padding: 16px;
+  font: inherit;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  outline-color: #bdbdbd;
+  resize: none;
+}
+
+.save {
+  width: 238px;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  padding: 10px;
+  background-color: #262626;
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+
+  &:hover, &:focus {
+    background-color: #000;
+  }
+}

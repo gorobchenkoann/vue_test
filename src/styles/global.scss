@@ -4,6 +4,8 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  line-height: 19px;
+  font-family: 'gilroy', 'Arial', sans-serif;
 }
 
 ul {
@@ -12,17 +14,28 @@ ul {
 	list-style: none;
 }
 
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .container {
   width: 1260px;
   margin: 0 auto;
   padding: 0 80px;
-  background-color: #eeeeee;
 }
 
 .done {
-  color: green;
+  // color: green;
+  background-color: rgba(125, 177, 152, .25);
 }
 
-.undone {
-  color: red;
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .2s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
